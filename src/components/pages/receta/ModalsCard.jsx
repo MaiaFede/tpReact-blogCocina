@@ -1,39 +1,38 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Col from 'react-bootstrap/Col';
-import Container from 'react-bootstrap/Container';
-import Modal from 'react-bootstrap/Modal';
-import Row from 'react-bootstrap/Row';
+import React from "react";
+import { Row, Modal, Container, Col, Button } from "react-bootstrap";
 
 const ModalsCard = (props) => {
-    return (
-        <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
+  return (
+    <Modal {...props}  dialogClassName="modal-90w"
+    aria-labelledby="example-custom-modal-styling-title">
       <Modal.Header closeButton>
-        <Modal.Title id="contained-modal-title-vcenter">
-          Using Grid in Modal
+        <Modal.Title id="contained-modal-title-vcenter" >
+          Cupcake Ferrero
         </Modal.Title>
       </Modal.Header>
-      <Modal.Body className="grid-example">
+      <Modal.Body >
         <Container>
           <Row>
+          <Col className="d-flex flex-column">
             <Col xs={12} md={8}>
-              .col-xs-12 .col-md-8
+              <h5> Ingredientes:</h5>
             </Col>
             <Col xs={6} md={4}>
-              .col-xs-6 .col-md-4
+              <ul>
+                <li>Chocolate</li>
+                <li>Leche</li>
+              </ul>
             </Col>
-          </Row>
+          </Col>
 
-          <Row>
+          <Col className="d-flex flex-column">
             <Col xs={6} md={4}>
-              .col-xs-6 .col-md-4
+            <h5>Receta:</h5>
             </Col>
             <Col xs={6} md={4}>
-              .col-xs-6 .col-md-4
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, nam.</p>
             </Col>
-            <Col xs={6} md={4}>
-              .col-xs-6 .col-md-4
-            </Col>
+          </Col>
           </Row>
         </Container>
       </Modal.Body>
@@ -41,7 +40,7 @@ const ModalsCard = (props) => {
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
-    );
+  );
 };
 
 export default ModalsCard;
