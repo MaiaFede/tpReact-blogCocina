@@ -2,11 +2,21 @@
     "recetas":[
         {
     "id": "1",
-      "nombreReceta": "brownie de chocolate",
+      "nombreReceta": "Brownie de chocolate",
       "categoria": "Dulce",
-      "imagen": "https://images.pexels.com/photos/372886/pexels-photo-372886.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      "ingredientes": "Un brownie denso y deliciosamente chocolatoso.",
-      "receta": "Nuestro brownie de chocolate es un placer indulgente para los amantes del chocolate. Con una textura densa y un intenso sabor a chocolate, es el acompañamiento perfecto para tu café o té."
+      "imagen": "https://images.unsplash.com/photo-1515037893149-de7f840978e2?q=80&w=1388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "ingredientes": ["Chocolate 50g", "Harina 100g", "Azúcar 200g", "Mantequilla 150g",
+      "Huevos 3"," 1 cucharadita de esencia de vainilla" ],
+      "instrucciones":[
+        "Precalienta el horno a 180°C y engrasa un molde para hornear de aproximadamente 20x20 cm.",
+        "En un recipiente resistente al calor, derrite el chocolate negro y la mantequilla juntos, ya sea en el microondas o en baño maría, hasta que estén completamente derretidos y suaves. Remueve para asegurarte de que estén bien combinados.",
+        "Agrega el azúcar al chocolate derretido y mezcla bien. Luego, añade los huevos uno a uno, batiendo después de cada adición.",
+        "Incorpora la esencia de vainilla y la pizca de sal, y mezcla hasta que estén bien combinadas.",
+        "Tamiza la harina y el cacao en polvo sobre la mezcla de chocolate y mezcla hasta que no queden grumos de harina. Si estás añadiendo nueces, almendras o chips de chocolate, este es el momento de incorporarlos.",
+        "Vierte la mezcla en el molde preparado y extiéndela de manera uniforme.",
+        "Hornea en el horno precalentado durante aproximadamente 25-30 minutos, o hasta que al insertar un palillo en el centro, este salga limpio o con unas pocas migas húmedas.",
+        "Una vez horneado, deja enfriar el brownie en el molde durante unos 15 minutos antes de desmoldarlo y cortarlo en porciones."
+      ]
         }
     ]
 }

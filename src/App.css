@@ -28,8 +28,9 @@ object-fit: cover;
 }
 .button-icon {
   
-    margin-left: 128px;
-    margin-top: 290px;
+    margin-left: 90px;
+    margin-top: 240px;
+   
 
 }
 .btn-link{
@@ -39,7 +40,11 @@ object-fit: cover;
   color:#d1746a;
   
 }
- 
+
+.mainSection {
+  flex-grow: 1;
+}
+
 
 
 #root {

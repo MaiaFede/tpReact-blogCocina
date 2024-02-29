@@ -31,7 +31,7 @@ const Menu = () => {
               alt="logo"
             />
           </Navbar.Brand>
-          <NavLink className="nav-link ps-4" to={"/Administrador"}>Administrador</NavLink>
+          <NavLink className="nav-link ps-4" to={"/administracion"}>Administrador</NavLink>
             
           </Nav>
         </Navbar.Collapse>
