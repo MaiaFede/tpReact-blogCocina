@@ -1,6 +1,7 @@
 import React from 'react';
 import Banner from "../common/Banner"
 import {Form , Row} from "react-bootstrap"
+import CardReceta from "../pages/receta/CardReceta"
 
 const Inicio = () => {
     return (
@@ -12,11 +13,9 @@ const Inicio = () => {
         <Form.Select  size="lg" className="ms-5  w-75">
         <option>Large select</option>
       </Form.Select>
-       
-        
-       
-       
+
         <hr />
+<CardReceta></CardReceta>
         </>
     );
 };

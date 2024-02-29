@@ -4,6 +4,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom"
 import Menu from "./components/common/Menu"
 import PiePagina from "./components/common/PiePagina";
 import Inicio from "./components/pages/Inicio"
+import "bootstrap-icons/font/bootstrap-icons.css";
 
 function App() {
   

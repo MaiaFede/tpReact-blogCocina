@@ -3,6 +3,7 @@
 .bg-beige {
   background-color: #e5e2d2;
 }
+/*Boton hamburguesa*/
 .navbar-light .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28215, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
@@ -10,6 +11,7 @@
 .navbar-light .navbar-toggler{
     border : 1px solid rgb(215, 59, 79)
 }
+/*Menu */
 .navbar-light .navbar-nav .nav-link{
   color: rgb(215, 59, 79, 0.75);
 }
@@ -17,6 +19,29 @@
 .navbar-light .navbar-nav .nav-link.active, footer {
   color: rgb(215, 59, 79, 1);
 }
+
+/*card recetas*/
+.img-card{
+width:100%;
+height: 100%;
+object-fit: cover;
+}
+.button-icon {
+  
+    margin-left: 128px;
+    margin-top: 290px;
+
+}
+.btn-link{
+  color: #c85a52;
+}
+.btn-link:hover{
+  color:#d1746a;
+  
+}
+ 
+
+
 #root {
   display: flex;
   flex-direction: column;
