@@ -1,20 +1,19 @@
 import React from 'react';
 import { Button } from "react-bootstrap";
 
-const ItemReceta = () => {
+const ItemReceta = ({recetaProps}) => {
     return (
         <tr>
-       <td className="text-center">id</td>
-      <td>Nombre</td>
-     
-      
-      <td>Categoria</td>
+       <td className="text-center">{recetaProps.id}</td>
+      <td>{recetaProps.nombreReceta}</td>
+
+      <td>{recetaProps.categoria}</td>
         
       <td className="text-center">
       <img
-          src=""
+          src={recetaProps.imagen}
           className="img-thumbnail"
-          alt=""
+          alt={recetaProps.nombreReceta}
         ></img>
      </td>
       <td className="text-center">
