@@ -10,3 +10,19 @@ export const leerRecetas = async () => {
       console.log(error);
     }
   };
+
+  export const crearReceta = async (recetaNueva) => {
+    try {
+      const respuesta = await fetch(APIReceta,{
+        method: "POST",
+        headers:{
+          "Content-Type":"application/json"
+        },
+        body: JSON.stringify(recetaNueva)
+      });
+      console.log(respuesta);
+      return respuesta;
+    } catch (error) {
+      console.log(error);
+    }
+  };
