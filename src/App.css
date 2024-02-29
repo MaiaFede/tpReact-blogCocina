@@ -33,11 +33,15 @@ object-fit: cover;
    
 
 }
+
+.text-light{
+  text-shadow: 2px 1px rgb(215, 59, 79)
+}
 .btn-link{
-  color: #c85a52;
+  color: #e5e2d2;
 }
 .btn-link:hover{
-  color:#d1746a;
+  color:rgb(215, 59, 79);
   
 }
 

@@ -2,8 +2,26 @@ import React from 'react';
 import Banner from "../common/Banner"
 import {Form , Row} from "react-bootstrap"
 import CardReceta from "../pages/receta/CardReceta"
+import { leerRecetas } from "../../helpers/queries";
+import {useState, useEffect} from "react"
+import ModalsCard from './receta/ModalsCard';
 
 const Inicio = () => {
+  const [recetasInicio, setRecetasInicio] = useState([]);
+
+  useEffect(()=>{
+      obtenerRecetas();
+  } , []);
+  
+  const obtenerRecetas  = async () => {
+      const respuesta = await leerRecetas();
+      if (respuesta.status === 200) {
+        const datos = await respuesta.json();
+        console.log(datos);
+        setRecetasInicio(datos)
+      } else {
+      }
+    };
     return (
         <>
         
@@ -16,8 +34,9 @@ const Inicio = () => {
 
         <hr />
         <Row>
-<CardReceta></CardReceta>
+{recetasInicio.map ((recetaInicio)=> <CardReceta key={recetaInicio.id} recetaInicio={recetaInicio}></CardReceta>)}
 </Row>
+
         </>
     );
 };

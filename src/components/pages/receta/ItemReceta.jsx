@@ -13,6 +13,7 @@ const ItemReceta = ({recetaProps}) => {
       <img
           src={recetaProps.imagen}
           className="img-thumbnail"
+          style={{heigth: "10rem", width:"10rem"}}
           alt={recetaProps.nombreReceta}
         ></img>
      </td>
