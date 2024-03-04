@@ -6,6 +6,7 @@ import PiePagina from "./components/common/PiePagina";
 import Inicio from "./components/pages/Inicio"
 import Administracion from "./components/pages/Administracion"
 import "bootstrap-icons/font/bootstrap-icons.css";
+import FormularioReceta from "./components/pages/receta/FormularioReceta";
 
 function App() {
   
@@ -18,6 +19,10 @@ function App() {
      <Route
      path="/administracion"
        element={<Administracion></Administracion>}
+     ></Route>
+     <Route
+     path="/administracion/crear"
+       element={<FormularioReceta></FormularioReceta>}
      ></Route>
      </Routes>
     <PiePagina></PiePagina>
