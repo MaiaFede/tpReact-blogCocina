@@ -24,8 +24,8 @@ const obtenerRecetas  = async () => {
     return (
         <section className="container mainSection">
       <div className="d-flex justify-content-between align-items-center mt-5">
-        <h1 className="display-4 ">Recetas disponibles</h1>
-        <Link className="btn btn-primary">
+      <h1 className="display-4 ">Recetas disponibles</h1>
+      <Link to={"/administracion/crear"} className="btn btn-primary">
           <i className="bi bi-file-earmark-plus"></i>
         </Link>
         </div>
