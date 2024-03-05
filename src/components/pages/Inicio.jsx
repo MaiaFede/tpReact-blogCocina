@@ -23,21 +23,19 @@ const Inicio = () => {
       }
     };
     return (
-        <>
-        
-        <Banner></Banner>
-       
-        <h1 className="display-4 ms-3 mt-3 ">Nuestros Productos</h1>
+      <>
+         <Banner></Banner>
+       <h1 className="display-4 ms-3 mt-3 ">Nuestros Productos</h1>
         <Form.Select  size="lg" className="ms-5  w-50">
         <option>Large select</option>
       </Form.Select>
-
-        <hr />
+   <hr />
+        <section className="container-fluid">
         <Row>
 {recetasInicio.map ((recetaInicio)=> <CardReceta key={recetaInicio.id} recetaInicio={recetaInicio}></CardReceta>)}
 </Row>
-
-        </>
+</section>
+</>
     );
 };
 
