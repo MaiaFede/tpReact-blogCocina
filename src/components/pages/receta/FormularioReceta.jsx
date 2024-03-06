@@ -42,7 +42,6 @@ const FormularioReceta = ({titulo,editando}) => {
 
   const datosValidados = async (receta) => {
     if (editando) {
-      console.log("Aqui editando")
       const respuesta = await editarReceta(receta, item);
       if (respuesta.status === 200) {
         Swal.fire({

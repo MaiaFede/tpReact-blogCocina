@@ -14,7 +14,7 @@ const ModalsCard = (props) => {
       <Modal.Body >
         <Container>
           <Row>
-          <Col md={6} className="d-flex flex-column">
+          <Col md={4} className="d-flex flex-column">
             <Col xs={12} md={2}>
               <h5> Ingredientes:</h5>
             </Col>
@@ -27,7 +27,7 @@ const ModalsCard = (props) => {
             </Col>
           </Col>
 
-          <Col md={6} className="d-flex flex-column">
+          <Col md={8} className="d-flex flex-column">
             <Col xs={6} md={2}>
             <h5>Instrucciones:</h5>
             </Col>

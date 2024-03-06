@@ -47,6 +47,18 @@
       "instrucciones": [
         "no seeeeeeeeeeeeeeeeeeeeeeeeee"
       ]
+    },
+    {
+      "id": "4e57",
+      "nombreReceta": "helado",
+      "imagen": "https://images.pexels.com/photos/768082/pexels-photo-768082.jpeg",
+      "categoria": "Nuevo",
+      "ingredientes": [
+        "leche, hielo"
+      ],
+      "instrucciones": [
+        "Junta la leche con la futa que desees consumir , bate 1 hora"
+      ]
     }
   ]
 }
