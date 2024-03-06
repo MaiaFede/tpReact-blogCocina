@@ -22,11 +22,11 @@ function App() {
      ></Route>
      <Route
     exact path="/administracion/crear"
-       element={<FormularioReceta creando={true} titulo={"Nueva receta"}></FormularioReceta>}
+       element={<FormularioReceta editando={false} titulo={"Nueva receta"}></FormularioReceta>}
      ></Route>
      <Route
-    exact path="/administracion/editar/item"
-       element={<FormularioReceta creando={false} titulo={"Editar receta"}></FormularioReceta>}
+    exact path="/administracion/editar/:item"
+       element={<FormularioReceta editando={true} titulo={"Editar receta"}></FormularioReceta>}
      ></Route>
      </Routes>
     <PiePagina></PiePagina>

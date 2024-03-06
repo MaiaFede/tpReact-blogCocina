@@ -57,9 +57,9 @@ if(respuestaRcetasNuevas.status === 200){
         ></img>
      </td>
       <td className="text-center">
-        <Button variant="warning" className="me-lg-2">
+        <Link className="me-lg-2 btn btn-warning" to={"/administracion/editar/"+ recetaProps.id}>
           <i className="bi bi-pencil-square"></i>
-        </Button>
+        </Link>
         <Button variant="danger" onClick={eliminarReceta}>
           <i className="bi bi-trash"></i>
         </Button>

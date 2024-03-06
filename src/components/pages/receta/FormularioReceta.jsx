@@ -1,22 +1,89 @@
 import React from 'react';
 import { Form, Button } from "react-bootstrap";
-import { crearReceta } from "../../../helpers/queries";
+import { crearReceta , obtenerReceta, editarReceta} from "../../../helpers/queries";
 import { useForm} from "react-hook-form";
-import { useState} from "react"
+import { useState, useEffect} from "react";
+import { useParams } from "react-router";
+import {useNavigate} from "react-router-dom"
+import Swal from 'sweetalert2';
 
-const FormularioReceta = ({titulo, creando}) => {
-  const {register, handleSubmit, formState:{errors}} = useForm(); 
+const FormularioReceta = ({titulo,editando}) => {
+  const {register, handleSubmit, formState:{errors}, reset, setValue} = useForm(); 
 
   const [ingredientes, setIngredientes]= useState([]);
   const [instrucciones, setInstrucciones] = useState([]);
+  const {item} = useParams()
+  const navegacion = useNavigate();
 
-if (creando = true{
-  <Route
-  exact path="/administracion/crear"
-     element={<FormularioReceta></FormularioReceta>}
-   ></Route>
-})
-  x
+  useEffect(()=>{
+    if(editando){
+      cargarRecetaEnFormulario();
+    }
+  }, [])
+
+  const cargarRecetaEnFormulario = async()=>{
+    const respuesta = await obtenerReceta(item)
+    if (respuesta.status === 200) {
+      const recetaBuscada = await respuesta.json();
+      console.log(recetaBuscada);
+      setValue("nombreReceta", recetaBuscada.nombreReceta);
+      setValue("imagen", recetaBuscada.imagen);
+      setValue("ingredientes", recetaBuscada.ingredientes);
+      setValue("instrucciones", recetaBuscada.instrucciones);
+      setValue("categoria", recetaBuscada.categoria);
+    }
+  }
+
+  const validateIngredientes = (value) => {
+    if (!value) return "Los ingredientes son obligatorios";
+    const ingredientesArray = value.split(',');
+    if (ingredientesArray.length < 2) return "Debe ingresar al menos dos ingredientes separados por coma";
+    }
+
+  const datosValidados = async (receta) => {
+    if (editando) {
+      console.log("Aqui editando")
+      const respuesta = await editarReceta(receta, item);
+      if (respuesta.status === 200) {
+        Swal.fire({
+          title: "Receta editada",
+          text: `La receta: ${receta.nombreReceta}, fue editada correctamente`,
+          icon: "success",
+        });
+        navegacion('/administracion');
+      } else {
+        Swal.fire({
+          title: "Ocurrio un error",
+          text: `La receta: ${receta.nombreReceta}, no pudo ser editada, intente esta operación en unos minutos.`,
+          icon: "error",
+        });
+      }
+    } else {
+      const recetaFinal = {
+        ...receta,
+        ingredientes:[receta.ingredientes],
+        instrucciones:[receta.instrucciones]
+      };
+      const respuesta = await crearReceta(recetaFinal);
+      
+      if (respuesta.status === 201) {
+        Swal.fire({
+          title: "Receta creada",
+          text: `La receta: ${receta.nombreReceta}, fue creada correctamente`,
+          icon: "success",
+        });
+        reset();
+      } else {
+        Swal.fire({
+          title: "Ocurrio un error",
+          text: `La receta no pudo ser creada, intente esta operación en unos minutos`,
+          icon: "error",
+        });
+      }
+    }
+  };
+
+  
 
     return (
         

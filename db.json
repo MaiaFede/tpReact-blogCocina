@@ -23,6 +23,30 @@
         "Hornea en el horno precalentado durante aproximadamente 25-30 minutos, o hasta que al insertar un palillo en el centro, este salga limpio o con unas pocas migas húmedas.",
         "Una vez horneado, deja enfriar el brownie en el molde durante unos 15 minutos antes de desmoldarlo y cortarlo en porciones."
       ]
+    },
+    {
+      "id": "09e7",
+      "nombreReceta": "Fideos con camarones",
+      "imagen": "https://images.pexels.com/photos/8969080/pexels-photo-8969080.jpeg",
+      "categoria": "Salado",
+      "ingredientes": [
+        "harina 300gr, 200 de levadura"
+      ],
+      "instrucciones": [
+        "mezcla la masa , y depuesssssssssssssss"
+      ]
+    },
+    {
+      "id": "5353",
+      "nombreReceta": "Donut",
+      "imagen": "https://images.pexels.com/photos/3090274/pexels-photo-3090274.jpeg",
+      "categoria": "Dulce",
+      "ingredientes": [
+        "huevo 5 , leche"
+      ],
+      "instrucciones": [
+        "no seeeeeeeeeeeeeeeeeeeeeeeeee"
+      ]
     }
   ]
 }
