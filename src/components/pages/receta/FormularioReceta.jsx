@@ -4,34 +4,24 @@ import { crearReceta } from "../../../helpers/queries";
 import { useForm} from "react-hook-form";
 import { useState} from "react"
 
-const FormularioReceta = () => {
+const FormularioReceta = ({titulo, creando}) => {
   const {register, handleSubmit, formState:{errors}} = useForm(); 
 
   const [ingredientes, setIngredientes]= useState([]);
   const [instrucciones, setInstrucciones] = useState([]);
 
-
-  const datosValidados = (receta) => {
-
-    const recetaFinal = {
-      ...receta,
-      ingredientes:[receta.ingredientes],
-      instrucciones:[receta.instrucciones]
-    };
-    console.log(recetaFinal);
-    crearReceta(recetaFinal)
-   
-  };
-const validateIngredientes = (value) => {
-  if (!value) return "Los ingredientes son obligatorios";
-  const ingredientesArray = value.split(',');
-  if (ingredientesArray.length < 2) return "Debe ingresar al menos dos ingredientes separados por coma";
-};
+if (creando = true{
+  <Route
+  exact path="/administracion/crear"
+     element={<FormularioReceta></FormularioReceta>}
+   ></Route>
+})
+  x
 
     return (
         
         <section className="container mainSection">
-        <h1 className="display-4 mt-5">Nueva receta</h1>
+        <h1 className="display-4 mt-5">{titulo}</h1>
         <hr />
         <Form className="my-4" onSubmit={handleSubmit(datosValidados)}>
           <Form.Group className="mb-3" controlId="formNombreReceta">
