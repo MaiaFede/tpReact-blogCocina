@@ -2,7 +2,8 @@ import React from 'react';
 import { Col, Card, Button } from "react-bootstrap";
 import ModalsCard from './ModalsCard';
 import {useState} from "react";
-import {BsChevronDoubleRight} from "react-icons/bs"
+import {BsChevronDoubleRight} from "react-icons/bs";
+
 
 const CardReceta = ({recetaInicio}) => {
     const [modalShow, setModalShow] = useState(false);
