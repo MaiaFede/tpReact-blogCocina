@@ -23,66 +23,6 @@
         "Hornea en el horno precalentado durante aproximadamente 25-30 minutos, o hasta que al insertar un palillo en el centro, este salga limpio o con unas pocas migas húmedas.",
         "Una vez horneado, deja enfriar el brownie en el molde durante unos 15 minutos antes de desmoldarlo y cortarlo en porciones."
       ]
-    },
-    {
-      "id": "e74a",
-      "nombreReceta": "Pancake con frutas de estacion",
-      "imagen": "https://images.pexels.com/photos/3090274/pexels-photo-3090274.jpeg",
-      "categoria": "Dulce",
-      "ingredientes": [
-        "2 tazas de harina leudante, 2 huevos, 2 tazas de leche, 1/4 taza de azúcar, 1/2 cucharadita de sal, 1 cucharada de mantequilla derretida, 1 cucharadita de extracto de vainilla (opcional), frutas de estación (fresas, arándanos, frambuesas, etc.), miel o jarabe de arce (opcional)."
-      ],
-      "instrucciones": [
-        null
-      ]
-    },
-    {
-      "id": "c5e4",
-      "nombreReceta": "Pancake con frutas de estacion",
-      "imagen": "https://images.pexels.com/photos/718739/pexels-photo-718739.jpeg",
-      "categoria": "Dulce",
-      "ingredientes": [
-        "2 tazas de harina leudante, 2 huevos, 2 tazas de leche, 1/4 taza de azúcar, 1/2 cucharadita de sal, 1 cucharada de mantequilla derretida, 1 cucharadita de extracto de vainilla (opcional), frutas de estación (fresas, arándanos, frambuesas, etc.), miel o jarabe de arce (opcional)."
-      ],
-      "instrucciones": [
-        null
-      ]
-    },
-    {
-      "id": "24f5",
-      "nombreReceta": "Jugo saludable",
-      "imagen": "https://images.pexels.com/photos/12050010/pexels-photo-12050010.jpeg",
-      "categoria": "Batidos",
-      "ingredientes": [
-        "Frutas:\n1 manzana verde\n1 naranja\n1/2 taza de fresas\n1/2 taza de arándanos,\nVerduras:\n1 puñado de espinacas\n1 tallo de apio\n1/2 pepino"
-      ],
-      "instrucciones": [
-        "Lava bien todas las frutas y verduras.\nCorta las frutas y verduras en trozos pequeños para facilitar el licuado.\nColoca todos los ingredientes en la licuadora y licúa hasta obtener una textura suave y homogénea.\nSi deseas un jugo más líquido, puedes agregar un poco de agua o agua de coco.\nDisfruta de tu jugo fresco y saludable de inmediato."
-      ]
-    },
-    {
-      "id": "290b",
-      "nombreReceta": "Pancake con frutas de estacion",
-      "imagen": "https://images.pexels.com/photos/768082/pexels-photo-768082.jpeg",
-      "categoria": "Batidos",
-      "ingredientes": [],
-      "instrucciones": []
-    },
-    {
-      "id": "50a2",
-      "nombreReceta": "Pancake con frutas de estacion",
-      "imagen": "https://images.pexels.com/photos/768082/pexels-photo-768082.jpeg",
-      "categoria": "Batidos",
-      "ingredientes": [],
-      "instrucciones": []
-    },
-    {
-      "id": "a678",
-      "nombreReceta": "Pancake con frutas de estacion",
-      "imagen": "https://images.pexels.com/photos/768082/pexels-photo-768082.jpeg",
-      "categoria": "Batidos",
-      "ingredientes": [],
-      "instrucciones": []
     }
   ]
 }

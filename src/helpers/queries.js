@@ -26,3 +26,15 @@ export const leerRecetas = async () => {
       console.log(error);
     }
   };
+
+  export const borrarReceta = async (id) => {
+    try {
+      const respuesta = await fetch(APIReceta+'/'+id,{
+        method: "DELETE"     
+      });
+      console.log(respuesta);
+      return respuesta;
+    } catch (error) {
+      console.log(error);
+    }
+  };

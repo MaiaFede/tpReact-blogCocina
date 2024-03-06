@@ -17,11 +17,11 @@ function App() {
     <Routes>
      <Route path="/" element={<Inicio></Inicio>}></Route>
      <Route
-     path="/administracion"
+     exact path="/administracion"
        element={<Administracion></Administracion>}
      ></Route>
      <Route
-     path="/administracion/crear"
+    exact path="/administracion/crear"
        element={<FormularioReceta></FormularioReceta>}
      ></Route>
      </Routes>

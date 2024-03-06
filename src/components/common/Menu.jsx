@@ -20,7 +20,7 @@ const Menu = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mx-auto align-items-center d-flex justify-content-center">
-          <NavLink className="nav-link pe-5" to={"/"}>Inicio</NavLink>
+          <NavLink end className="nav-link pe-5" to={"/"}>Inicio</NavLink>
             
             <Navbar.Brand as={Link} to="/" className="me-auto align-items-center d-none d-lg-block ">
             <img
@@ -31,7 +31,7 @@ const Menu = () => {
               alt="logo"
             />
           </Navbar.Brand>
-          <NavLink className="nav-link ps-4" to={"/administracion"}>Administrador</NavLink>
+          <NavLink end className="nav-link ps-4" to={"/administracion"}>Administrador</NavLink>
             
           </Nav>
         </Navbar.Collapse>
