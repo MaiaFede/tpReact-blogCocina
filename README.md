@@ -1,8 +1,18 @@
-# React + Vite
+# Blog de cocina ✨
+Proyecto para practicar consultas a una API y CRUD con React-hook-form
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Funcionalidades
+Ver recetas: Busca y explora una amplia variedad de recetas con diferentes filtros.
+Crear recetas: Comparte tus propias recetas con la comunidad, incluyendo fotos, ingredientes, pasos e información nutricional.
+Editar recetas: Modifica tus recetas existentes para actualizar información, corregir errores o agregar nuevas ideas.
+Eliminar recetas: Elimina las recetas que ya no necesitas o que no deseas compartir.
 
-Currently, two official plugins are available:
+## Recursos utilizados ️
+-React-bootstrap: Interfaz de usuario intuitiva y receptiva.
+-Bootstrap v5.2: Diseño web moderno y flexible.
+-React-hook-form: Validación de formularios robusta y fácil de usar.
+-React-router: Navegación intuitiva entre diferentes páginas del proyecto.
+-SweetAlert2: Mensajes emergentes personalizables para mejorar la experiencia del usuario.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ¡Empieza a cocinar! ‍‍
+Este proyecto te permite explorar el mundo de la cocina mientras aprendes sobre APIs y desarrollo web con React. ¡Disfruta creando, editando y compartiendo tus recetas favoritas!

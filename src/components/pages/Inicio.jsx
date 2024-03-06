@@ -26,9 +26,6 @@ const Inicio = () => {
       <>
          <Banner></Banner>
        <h1 className="display-4 ms-3 mt-3 ">Nuestros Productos</h1>
-        <Form.Select  size="lg" className="ms-5  w-50">
-        <option>Large select</option>
-      </Form.Select>
    <hr />
         <section className="container-fluid">
         <Row>
