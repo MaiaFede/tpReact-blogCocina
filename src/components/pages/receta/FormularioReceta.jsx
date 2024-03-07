@@ -3,7 +3,7 @@ import { Form, Button } from "react-bootstrap";
 import { crearReceta , obtenerReceta, editarReceta} from "../../../helpers/queries";
 import { useForm} from "react-hook-form";
 import { useState, useEffect} from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 import {useNavigate} from "react-router-dom"
 import Swal from 'sweetalert2';
 
@@ -36,33 +36,45 @@ const FormularioReceta = ({titulo,editando}) => {
 
   const validateIngredientes = (value) => {
     if (!value) return "Los ingredientes son obligatorios";
-    const ingredientesArray = value.split(',');
-    if (ingredientesArray.length < 2) return "Debe ingresar al menos dos ingredientes separados por coma";
-    }
-
+    if (!value.includes(',')) return "Los ingredientes deben estar separados por comas";
+  }
+  
+  const validateInstrucciones = (value) => {
+    if (!value) return "Las instrucciones son obligatorias";
+    if (!value.includes('\n')) return "Las instrucciones deben tener saltos de línea";
+  }
   const datosValidados = async (receta) => {
+    const ingredientesArray = receta.ingredientes.split(',').map(ingrediente => ingrediente.trim());
+      console.log(ingredientesArray)
+
+      
+      const instruccionesArray = receta.instrucciones.split('\n').map(instruccion => instruccion.trim());
+      const recetaFinal = {
+        ...receta,
+        ingredientes:ingredientesArray,
+        instrucciones:instruccionesArray
+      };
     if (editando) {
-      const respuesta = await editarReceta(receta, item);
+      console.log(recetaFinal)
+      const respuesta = await editarReceta(recetaFinal, item);
       if (respuesta.status === 200) {
         Swal.fire({
           title: "Receta editada",
-          text: `La receta: ${receta.nombreReceta}, fue editada correctamente`,
+          text: `La receta: ${recetaFinal.nombreReceta}, fue editada correctamente`,
           icon: "success",
         });
         navegacion('/administracion');
       } else {
         Swal.fire({
           title: "Ocurrio un error",
-          text: `La receta: ${receta.nombreReceta}, no pudo ser editada, intente esta operación en unos minutos.`,
+          text: `La receta: ${recetaFinal.nombreReceta}, no pudo ser editada, intente esta operación en unos minutos.`,
           icon: "error",
         });
       }
+      
     } else {
-      const recetaFinal = {
-        ...receta,
-        ingredientes:[receta.ingredientes],
-        instrucciones:[receta.instrucciones]
-      };
+    
+      console.log(recetaFinal)
       const respuesta = await crearReceta(recetaFinal);
       
       if (respuesta.status === 201) {
@@ -177,6 +189,7 @@ const FormularioReceta = ({titulo,editando}) => {
                   value: 500,
                   message: "Debe ingresar como maximo 500 caracteres",
                 },
+                validate: validateInstrucciones
               })}
   
             />
