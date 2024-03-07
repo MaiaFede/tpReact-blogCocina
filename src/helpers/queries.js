@@ -39,9 +39,9 @@ export const leerRecetas = async () => {
     }
   };
 
-export const obtenerReceta = async (id) => {
+export const obtenerReceta = async (item) => {
   try {
-    const respuesta = await fetch(APIReceta+'/'+id);
+    const respuesta = await fetch(APIReceta+'/'+item);
     console.log(respuesta)
     return respuesta;
   } catch (error) {
@@ -49,9 +49,9 @@ export const obtenerReceta = async (id) => {
   }
 };
 
-export const editarReceta = async (recetaEditada, id) => {
+export const editarReceta = async (recetaEditada, item) => {
   try {
-    const respuesta = await fetch(APIReceta+'/'+id,{
+    const respuesta = await fetch(APIReceta+'/'+item,{
       method: "PUT",
       headers:{
         "Content-Type":"application/json"

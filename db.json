@@ -37,27 +37,34 @@
       ]
     },
     {
-      "id": "5353",
-      "nombreReceta": "Donut",
+      "nombreReceta": "Jugo saludable",
       "imagen": "https://images.pexels.com/photos/3090274/pexels-photo-3090274.jpeg",
-      "categoria": "Dulce",
+      "categoria": "Batidos",
       "ingredientes": [
-        "huevo 5 , leche"
+        "HARINA 100",
+        "Aguante broicv",
+        "y ya no se que mas tiene bue"
       ],
       "instrucciones": [
-        "no seeeeeeeeeeeeeeeeeeeeeeeeee"
-      ]
+        "Hornea a 300 grados,Pasa la masa aun bowl,ah cierto que es un jugo",
+        "Hacelo como se te cante",
+        "bue todo mal"
+      ],
+      "id": "b2ed"
     },
     {
-      "id": "4e57",
+      "id": "1594",
       "nombreReceta": "helado",
-      "imagen": "https://images.pexels.com/photos/768082/pexels-photo-768082.jpeg",
-      "categoria": "Nuevo",
+      "imagen": "https://images.pexels.com/photos/7664088/pexels-photo-7664088.jpeg",
+      "categoria": "Salado",
       "ingredientes": [
-        "leche, hielo"
+        "HARINA",
+        "CHOCOLATE",
+        "CAÑA DE AZUCAR"
       ],
       "instrucciones": [
-        "Junta la leche con la futa que desees consumir , bate 1 hora"
+        "HolaaaaAAAAAA",
+        "Okayyy"
       ]
     }
   ]
