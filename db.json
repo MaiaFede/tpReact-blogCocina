@@ -37,28 +37,57 @@
       ]
     },
     {
-      "id": "5353",
-      "nombreReceta": "Donut",
+      "nombreReceta": "Jugo saludable",
       "imagen": "https://images.pexels.com/photos/3090274/pexels-photo-3090274.jpeg",
-      "categoria": "Dulce",
+      "categoria": "Batidos",
       "ingredientes": [
-        "huevo 5 , leche"
+        "HARINA 100",
+        "Aguante broicv",
+        "y ya no se que mas tiene bue"
       ],
       "instrucciones": [
-        "no seeeeeeeeeeeeeeeeeeeeeeeeee"
+        "Hornea a 300 grados,Pasa la masa aun bowl,ah cierto que es un jugo",
+        "Hacelo como se te cante",
+        "bue todo mal"
+      ],
+      "id": "b2ed"
+    },
+    {
+      "id": "1594",
+      "nombreReceta": "helado",
+      "imagen": "https://images.pexels.com/photos/7664088/pexels-photo-7664088.jpeg",
+      "categoria": "Salado",
+      "ingredientes": [
+        "HARINA",
+        "CHOCOLATE",
+        "CAÑA DE AZUCAR"
+      ],
+      "instrucciones": [
+        "HolaaaaAAAAAA",
+        "Okayyy"
       ]
     },
     {
-      "id": "4e57",
-      "nombreReceta": "helado",
-      "imagen": "https://images.pexels.com/photos/768082/pexels-photo-768082.jpeg",
+      "nombreReceta": "Donut",
+      "imagen": "https://images.pexels.com/photos/12050010/pexels-photo-12050010.jpeg",
       "categoria": "Nuevo",
       "ingredientes": [
-        "leche, hielo"
+        "Harina 400gr",
+        "leche 150 ml",
+        "chocolate",
+        "fresa",
+        "nequick",
+        "matambre",
+        "tengo hambre"
       ],
       "instrucciones": [
-        "Junta la leche con la futa que desees consumir , bate 1 hora"
-      ]
+        "Hornea todo el dia,",
+        "A un monto ,",
+        "era broma,",
+        "Mezcla primero el aciete y el agua,",
+        "lsito riquisimo"
+      ],
+      "id": "1385"
     }
   ]
 }
