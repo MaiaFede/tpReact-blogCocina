@@ -66,6 +66,28 @@
         "HolaaaaAAAAAA",
         "Okayyy"
       ]
+    },
+    {
+      "nombreReceta": "Donut",
+      "imagen": "https://images.pexels.com/photos/12050010/pexels-photo-12050010.jpeg",
+      "categoria": "Nuevo",
+      "ingredientes": [
+        "Harina 400gr",
+        "leche 150 ml",
+        "chocolate",
+        "fresa",
+        "nequick",
+        "matambre",
+        "tengo hambre"
+      ],
+      "instrucciones": [
+        "Hornea todo el dia,",
+        "A un monto ,",
+        "era broma,",
+        "Mezcla primero el aciete y el agua,",
+        "lsito riquisimo"
+      ],
+      "id": "1385"
     }
   ]
 }
