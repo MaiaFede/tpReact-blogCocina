@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Button } from "react-bootstrap";
 import { crearReceta , obtenerReceta, editarReceta} from "../../../helpers/queries";
 import { useForm} from "react-hook-form";
-import { useState, useEffect} from "react";
+import { useEffect} from "react";
 import { useParams } from "react-router-dom";
 import {useNavigate} from "react-router-dom"
 import Swal from 'sweetalert2';
@@ -10,8 +10,6 @@ import Swal from 'sweetalert2';
 const FormularioReceta = ({titulo,editando}) => {
   const {register, handleSubmit, formState:{errors}, reset, setValue} = useForm(); 
 
-  const [ingredientes, setIngredientes]= useState([]);
-  const [instrucciones, setInstrucciones] = useState([]);
   const {item} = useParams()
   const navegacion = useNavigate();
 
@@ -25,7 +23,6 @@ const FormularioReceta = ({titulo,editando}) => {
     const respuesta = await obtenerReceta(item)
     if (respuesta.status === 200) {
       const recetaBuscada = await respuesta.json();
-      console.log(recetaBuscada);
       setValue("nombreReceta", recetaBuscada.nombreReceta);
       setValue("imagen", recetaBuscada.imagen);
       setValue("ingredientes", recetaBuscada.ingredientes);
@@ -45,17 +42,15 @@ const FormularioReceta = ({titulo,editando}) => {
   }
   const datosValidados = async (receta) => {
     const ingredientesArray = receta.ingredientes.split(',').map(ingrediente => ingrediente.trim());
-      console.log(ingredientesArray)
 
+    const instruccionesArray = receta.instrucciones.split('\n').map(instruccion => instruccion.trim());
       
-      const instruccionesArray = receta.instrucciones.split('\n').map(instruccion => instruccion.trim());
       const recetaFinal = {
         ...receta,
         ingredientes:ingredientesArray,
         instrucciones:instruccionesArray
       };
     if (editando) {
-      console.log(recetaFinal)
       const respuesta = await editarReceta(recetaFinal, item);
       if (respuesta.status === 200) {
         Swal.fire({
@@ -73,8 +68,6 @@ const FormularioReceta = ({titulo,editando}) => {
       }
       
     } else {
-    
-      console.log(recetaFinal)
       const respuesta = await crearReceta(recetaFinal);
       
       if (respuesta.status === 201) {

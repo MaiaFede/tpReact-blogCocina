@@ -16,7 +16,6 @@ const obtenerRecetas  = async () => {
     const respuesta = await leerRecetas();
     if (respuesta.status === 200) {
       const datos = await respuesta.json();
-      console.log(datos);
       setRecetas(datos)
     } else {
     }

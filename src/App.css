@@ -48,6 +48,12 @@ object-fit: cover;
   flex-grow: 1;
 }
 
+/*boton de buscar inicio*/
+.btn-cute{
+  background-color: #e6afa6;
+  border-color: #e6afa6;
+  color: white;
+}
 
 
 #root {
