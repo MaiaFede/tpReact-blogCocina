@@ -1,5 +1,5 @@
 const APIReceta = import.meta.env.VITE_API_RECETA;
-console.log (APIReceta)
+//console.log (APIReceta)
 
 export const leerRecetas = async () => {
     try {
@@ -20,7 +20,7 @@ export const leerRecetas = async () => {
         },
         body: JSON.stringify(recetaNueva)
       });
-      console.log(respuesta);
+      //console.log(respuesta);
       return respuesta;
     } catch (error) {
       console.log(error);
@@ -32,7 +32,7 @@ export const leerRecetas = async () => {
       const respuesta = await fetch(APIReceta+'/'+id,{
         method: "DELETE"     
       });
-      console.log(respuesta);
+      //console.log(respuesta);
       return respuesta;
     } catch (error) {
       console.log(error);
@@ -42,7 +42,7 @@ export const leerRecetas = async () => {
 export const obtenerReceta = async (item) => {
   try {
     const respuesta = await fetch(APIReceta+'/'+item);
-    console.log(respuesta)
+    //console.log(respuesta)
     return respuesta;
   } catch (error) {
     console.log(error);

@@ -2,13 +2,13 @@ import React from "react";
 import { Row, Modal, Container, Col, Button } from "react-bootstrap";
 
 const ModalsCard = (props) => {
-  const { recetaInicio } = props;
+  const { receta } = props;
   return (
     <Modal {...props}  dialogClassName="modal-90w"
     aria-labelledby="example-custom-modal-styling-title" size="lg">
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter" >
-          {recetaInicio.nombreReceta}
+          {receta.nombreReceta}
         </Modal.Title>
       </Modal.Header>
       <Modal.Body >
@@ -20,7 +20,7 @@ const ModalsCard = (props) => {
             </Col>
             <Col xs={6} md={10}>
               <ul>
-              {recetaInicio.ingredientes.map((nombre, index) => (
+              {receta.ingredientes.map((nombre, index) => (
         <li key={index}>{nombre}</li>
       ))}
               </ul>
@@ -33,7 +33,7 @@ const ModalsCard = (props) => {
             </Col>
             <Col xs={6} md={10}>
               <ol>
-              {recetaInicio.instrucciones.map((paso, index) => (
+              {receta.instrucciones.map((paso, index) => (
         <li key={index}>{paso}</li>
       ))}
               </ol>

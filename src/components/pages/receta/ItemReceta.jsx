@@ -25,7 +25,7 @@ const ItemReceta = ({recetaProps, setRecetas}) => {
             icon: "success"
           });
 const respuestaRcetasNuevas = await leerRecetas();
-console.log(respuestaRcetasNuevas)
+//console.log(respuestaRcetasNuevas)
 if(respuestaRcetasNuevas.status === 200){
   const NuevasRecetas = await respuestaRcetasNuevas.json();
   setRecetas(NuevasRecetas)

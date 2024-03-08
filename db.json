@@ -53,19 +53,19 @@
       "id": "b2ed"
     },
     {
-      "id": "1594",
       "nombreReceta": "helado",
       "imagen": "https://images.pexels.com/photos/7664088/pexels-photo-7664088.jpeg",
-      "categoria": "Salado",
+      "categoria": "Dulce",
       "ingredientes": [
         "HARINA",
         "CHOCOLATE",
         "CAÑA DE AZUCAR"
       ],
       "instrucciones": [
-        "HolaaaaAAAAAA",
+        "HolaaaaAAAAAA,",
         "Okayyy"
-      ]
+      ],
+      "id": "1594"
     },
     {
       "nombreReceta": "Donut",
