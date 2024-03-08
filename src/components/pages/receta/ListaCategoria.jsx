@@ -1,19 +1,26 @@
 import React from 'react';
 import { Row } from "react-bootstrap";
 import CardReceta from './CardReceta';
-import { useGlobalState } from 'react-hook-form';
 
-const ListaCategoria = ({recetasInicio}) => {
-    const { categoriaSeleccionada } = useGlobalState('categoria');
-
-  const recetasFiltradas = recetasInicio.filter(receta => receta.categoria === categoriaSeleccionada);
+const ListaCategoria = ({recetasInicio, categoriaSeleccionada}) => {
+  let recetasFiltradas = recetasInicio;
+  if (categoriaSeleccionada) {
+     recetasFiltradas = recetasInicio.filter(receta => receta.categoria === categoriaSeleccionada);
+  console.log(recetasFiltradas)
+  }else {
+    recetasFiltradas = recetasInicio; 
+    console.log(recetasFiltradas)
+  }
 
   return (
-    <ul>
-      {recetasFiltradas.map(receta => (
-        <li key={receta.id}><CardReceta receta={receta} /></li>
+  
+   <Row>
+      {
+      recetasFiltradas.map(receta => (
+        <CardReceta key={receta.id} receta={receta} />
       ))}
-    </ul>
+  </Row>
+    
   );
       }
 export default ListaCategoria;

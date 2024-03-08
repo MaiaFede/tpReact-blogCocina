@@ -1,6 +1,6 @@
 import React from 'react';
 import Banner from "../common/Banner"
-import {Form , Row} from "react-bootstrap"
+import {Form , Row, Col} from "react-bootstrap"
 import ListaCategoria from './receta/ListaCategoria';
 import { leerRecetas } from "../../helpers/queries";
 import {useState, useEffect} from "react"
@@ -39,10 +39,17 @@ const Inicio = () => {
     return (
       <>
          <Banner></Banner>
-       <h1 className="display-4 ms-3 mt-3 ">Nuestros Productos</h1>
-       <Form onSubmit={handleSubmit(onSubmit)}>
-        <Form.Select size="lg" className="ms-5 w-50" aria-label="Seleccione una categoria:" {...register("categoria", { required: "Debe seleccionar una categoria" })}>
-          <option value="">Seleccione un pais:</option>
+        
+
+       <h1 className="display-4 ms-3 mt-3 ">Nuestras Recetas</h1>
+       <div className="container-fluid">
+     
+     
+       <Form onSubmit={handleSubmit(onSubmit)} className="">
+       <Row className="d-flex flex-end">
+       <Col md={7}>
+        <Form.Select size="lg" className=" w-100 " aria-label="Seleccione una categoria:" {...register("categoria", { required: categoriaSeleccionada ? false : "Debe seleccionar una categoria"})}  defaultValue="">
+          <option value="">Todas las categorias</option>
           <option value="Nuevo">Nuevo</option>
           <option value="Batidos">Batidos</option>
           <option value="Dulce">Dulce</option>
@@ -51,8 +58,18 @@ const Inicio = () => {
         <Form.Text className="text-danger">
           {errors.categoria?.message}
         </Form.Text>
-        <button type="submit" className="btn btn-primary">Buscar</button>
+        </Col>
+        <Col md={5}>
+      <button type="submit" className="btn btn-cute">Buscar</button>
+      </Col>
+      </Row> 
       </Form>
+   
+      
+    
+   
+       </div>
+      
    <hr />
         <section className="container-fluid">
         <ListaCategoria recetasInicio={recetasInicio } categoriaSeleccionada={categoriaSeleccionada}> </ListaCategoria>
